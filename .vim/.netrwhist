@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/johan/dev/repos/dinner'
+let g:netrw_dirhist_2='/Users/johan/munich'
+let g:netrw_dirhist_3='/usr/local/var/rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/bundler/gems/active_admin-76db61e9c9f8/lib/active_admin/base_controller'
