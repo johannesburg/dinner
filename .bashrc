@@ -1,16 +1,15 @@
 #For use on ATTU@CSE
 #export PATH=/usr/local/bin:$PATH
-source ~/git-completion.bash
+#source ~/git-completion.bash
 
 # aliases
 alias ll="ls -la"
-alias l="ll"
+alias l="ls -la"
 alias p="pwd"
 alias rm="rm -i"
 alias cl='cd && l'
 alias cd..='cd ..'
 alias ..='cd ..'
-#alias lockme='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 alias gs='git status'
 alias gl='git log'
@@ -21,3 +20,7 @@ alias gap='git add -p'
 alias gp='git pull'
 alias gpr='git pull --rebase'
 alias gb='git branch'
+
+#ssh-add ~/.ssh/id_rsa
+export PATH=/cse/courses/cse390p/bin:${PATH}
+export PATH=/cse/courses/cse451/17sp/local/bin:$PATH
