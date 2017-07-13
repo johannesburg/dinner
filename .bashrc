@@ -20,7 +20,3 @@ alias gap='git add -p'
 alias gp='git pull'
 alias gpr='git pull --rebase'
 alias gb='git branch'
-
-#ssh-add ~/.ssh/id_rsa
-export PATH=/cse/courses/cse390p/bin:${PATH}
-export PATH=/cse/courses/cse451/17sp/local/bin:$PATH
