@@ -12,4 +12,5 @@ export TERM=xterm-256color
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 # Download powerline fonts with: https://github.com/powerline/fonts
+# Currently using 12pt Fira Mono. Much <3 for this cowboy font!
 export PATH
