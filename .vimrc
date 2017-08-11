@@ -6,8 +6,8 @@ let mapleader = ","
 
 "" Whitespace
 set nowrap                      " don't wrap lines
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
+set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -18,9 +18,30 @@ set smartcase                   " ... unless they contain at least one capital l
 
 "" Plugins
 set omnifunc=syntaxcomplete#Complete
+" Lightline config
+" for lightline to appear with color
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+" status bar colorscheme
+let g:lightline = {
+\ 'colorscheme': 'seoul256',
+\ }
+" to prevent mode bar at bottom
+set noshowmode
+" Color Scheme Config
+"  seoul256 (dark):
+"    Range:   233 (darkest) ~ 239 (lightest)
+"    Default: 237
+let g:seoul256_background = 233
 
 "" Custom keybindings
-inoremap jk <ESC>
+                                " escape with 'jk' command
+inoremap jk <Esc>
+                                " quick nerdtree opening
+map <C-n> :NERDTreeToggle<CR>   
+                                " switch between panes with ease 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -43,6 +64,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 " plugin for syntax checking
 Plugin 'scrooloose/syntastic'
+" plugin for tree exploration
+Plugin 'scrooloose/nerdtree'
+" plugin vim-airline themes
+Plugin 'vim-airline/vim-airline-themes'
+" plugin for dockerfile syntax highlighting
+Plugin 'ekalinin/Dockerfile.vim'
+" plugin for robotframework syntax highlighting
+Plugin 'mfukar/robotframework-vim'
+" lightline is a powerline alternative, nice status bar
+Plugin 'itchyny/lightline.vim'
+" plugin for cute, seoul-themed color scheme
+Plugin 'junegunn/seoul256.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,3 +93,4 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 set relativenumber
+colo seoul256
