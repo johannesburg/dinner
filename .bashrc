@@ -22,3 +22,5 @@ alias gpr='git pull --rebase'
 alias gb='git branch'
 
 alias trocs="cd /Users/jmichalo/rocs-dev/logging && /rsvp/common/scripts/run-rocs-tests.sh"
+alias brocs="/rsvp/common/scripts/build_rocs_images.sh && clear && echo \"You built rocs!\""
+git config --global core.editor /usr/bin/vim
